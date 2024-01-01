@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Project.Admin
+{
+    public partial class WebForm11 : System.Web.UI.Page
+    {
+        SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConStr"].ConnectionString);
+        SqlCommand cmd = new SqlCommand();
+        string qry;
+        string tgid;
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            tgid = Request.QueryString.Get("tgid").ToString();
+            cn.Open();
+            qry = "delete tour_guides where tgid=" + tgid;
+            cmd = new SqlCommand(qry, cn);
+            cmd.ExecuteNonQuery();
+            cn.Close();
+            Response.Redirect("~/Admin/tourguidedata.aspx");
+        }
+    }
+}

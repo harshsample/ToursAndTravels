@@ -1,0 +1,1737 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7DD74DAE-4C48-4B53-861B-0ACEA8CB8F34}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AJAX\AJAX 2010\AJAX .NET4\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Razorpay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Razorpay.3.0.2\lib\net45\Razorpay.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\admin_register.aspx" />
+    <Content Include="Admin\admin_signin.aspx" />
+    <Content Include="Admin\assets\css\animate.css" />
+    <Content Include="Admin\assets\css\app-style.css" />
+    <Content Include="Admin\assets\css\bootstrap.min.css" />
+    <Content Include="Admin\assets\css\icons.css" />
+    <Content Include="Admin\assets\css\sidebar-menu.css" />
+    <Content Include="Admin\assets\flags\1x1\ad.svg" />
+    <Content Include="Admin\assets\flags\1x1\ae.svg" />
+    <Content Include="Admin\assets\flags\1x1\af.svg" />
+    <Content Include="Admin\assets\flags\1x1\ag.svg" />
+    <Content Include="Admin\assets\flags\1x1\ai.svg" />
+    <Content Include="Admin\assets\flags\1x1\al.svg" />
+    <Content Include="Admin\assets\flags\1x1\am.svg" />
+    <Content Include="Admin\assets\flags\1x1\ao.svg" />
+    <Content Include="Admin\assets\flags\1x1\aq.svg" />
+    <Content Include="Admin\assets\flags\1x1\ar.svg" />
+    <Content Include="Admin\assets\flags\1x1\as.svg" />
+    <Content Include="Admin\assets\flags\1x1\at.svg" />
+    <Content Include="Admin\assets\flags\1x1\au.svg" />
+    <Content Include="Admin\assets\flags\1x1\aw.svg" />
+    <Content Include="Admin\assets\flags\1x1\ax.svg" />
+    <Content Include="Admin\assets\flags\1x1\az.svg" />
+    <Content Include="Admin\assets\flags\1x1\ba.svg" />
+    <Content Include="Admin\assets\flags\1x1\bb.svg" />
+    <Content Include="Admin\assets\flags\1x1\bd.svg" />
+    <Content Include="Admin\assets\flags\1x1\be.svg" />
+    <Content Include="Admin\assets\flags\1x1\bf.svg" />
+    <Content Include="Admin\assets\flags\1x1\bg.svg" />
+    <Content Include="Admin\assets\flags\1x1\bh.svg" />
+    <Content Include="Admin\assets\flags\1x1\bi.svg" />
+    <Content Include="Admin\assets\flags\1x1\bj.svg" />
+    <Content Include="Admin\assets\flags\1x1\bl.svg" />
+    <Content Include="Admin\assets\flags\1x1\bm.svg" />
+    <Content Include="Admin\assets\flags\1x1\bn.svg" />
+    <Content Include="Admin\assets\flags\1x1\bo.svg" />
+    <Content Include="Admin\assets\flags\1x1\bq.svg" />
+    <Content Include="Admin\assets\flags\1x1\br.svg" />
+    <Content Include="Admin\assets\flags\1x1\bs.svg" />
+    <Content Include="Admin\assets\flags\1x1\bt.svg" />
+    <Content Include="Admin\assets\flags\1x1\bv.svg" />
+    <Content Include="Admin\assets\flags\1x1\bw.svg" />
+    <Content Include="Admin\assets\flags\1x1\by.svg" />
+    <Content Include="Admin\assets\flags\1x1\bz.svg" />
+    <Content Include="Admin\assets\flags\1x1\ca.svg" />
+    <Content Include="Admin\assets\flags\1x1\cc.svg" />
+    <Content Include="Admin\assets\flags\1x1\cd.svg" />
+    <Content Include="Admin\assets\flags\1x1\cf.svg" />
+    <Content Include="Admin\assets\flags\1x1\cg.svg" />
+    <Content Include="Admin\assets\flags\1x1\ch.svg" />
+    <Content Include="Admin\assets\flags\1x1\ci.svg" />
+    <Content Include="Admin\assets\flags\1x1\ck.svg" />
+    <Content Include="Admin\assets\flags\1x1\cl.svg" />
+    <Content Include="Admin\assets\flags\1x1\cm.svg" />
+    <Content Include="Admin\assets\flags\1x1\cn.svg" />
+    <Content Include="Admin\assets\flags\1x1\co.svg" />
+    <Content Include="Admin\assets\flags\1x1\cr.svg" />
+    <Content Include="Admin\assets\flags\1x1\cu.svg" />
+    <Content Include="Admin\assets\flags\1x1\cv.svg" />
+    <Content Include="Admin\assets\flags\1x1\cw.svg" />
+    <Content Include="Admin\assets\flags\1x1\cx.svg" />
+    <Content Include="Admin\assets\flags\1x1\cy.svg" />
+    <Content Include="Admin\assets\flags\1x1\cz.svg" />
+    <Content Include="Admin\assets\flags\1x1\de.svg" />
+    <Content Include="Admin\assets\flags\1x1\dj.svg" />
+    <Content Include="Admin\assets\flags\1x1\dk.svg" />
+    <Content Include="Admin\assets\flags\1x1\dm.svg" />
+    <Content Include="Admin\assets\flags\1x1\do.svg" />
+    <Content Include="Admin\assets\flags\1x1\dz.svg" />
+    <Content Include="Admin\assets\flags\1x1\ec.svg" />
+    <Content Include="Admin\assets\flags\1x1\ee.svg" />
+    <Content Include="Admin\assets\flags\1x1\eg.svg" />
+    <Content Include="Admin\assets\flags\1x1\eh.svg" />
+    <Content Include="Admin\assets\flags\1x1\er.svg" />
+    <Content Include="Admin\assets\flags\1x1\es-ct.svg" />
+    <Content Include="Admin\assets\flags\1x1\es.svg" />
+    <Content Include="Admin\assets\flags\1x1\et.svg" />
+    <Content Include="Admin\assets\flags\1x1\eu.svg" />
+    <Content Include="Admin\assets\flags\1x1\fi.svg" />
+    <Content Include="Admin\assets\flags\1x1\fj.svg" />
+    <Content Include="Admin\assets\flags\1x1\fk.svg" />
+    <Content Include="Admin\assets\flags\1x1\fm.svg" />
+    <Content Include="Admin\assets\flags\1x1\fo.svg" />
+    <Content Include="Admin\assets\flags\1x1\fr.svg" />
+    <Content Include="Admin\assets\flags\1x1\ga.svg" />
+    <Content Include="Admin\assets\flags\1x1\gb-eng.svg" />
+    <Content Include="Admin\assets\flags\1x1\gb-nir.svg" />
+    <Content Include="Admin\assets\flags\1x1\gb-sct.svg" />
+    <Content Include="Admin\assets\flags\1x1\gb-wls.svg" />
+    <Content Include="Admin\assets\flags\1x1\gb.svg" />
+    <Content Include="Admin\assets\flags\1x1\gd.svg" />
+    <Content Include="Admin\assets\flags\1x1\ge.svg" />
+    <Content Include="Admin\assets\flags\1x1\gf.svg" />
+    <Content Include="Admin\assets\flags\1x1\gg.svg" />
+    <Content Include="Admin\assets\flags\1x1\gh.svg" />
+    <Content Include="Admin\assets\flags\1x1\gi.svg" />
+    <Content Include="Admin\assets\flags\1x1\gl.svg" />
+    <Content Include="Admin\assets\flags\1x1\gm.svg" />
+    <Content Include="Admin\assets\flags\1x1\gn.svg" />
+    <Content Include="Admin\assets\flags\1x1\gp.svg" />
+    <Content Include="Admin\assets\flags\1x1\gq.svg" />
+    <Content Include="Admin\assets\flags\1x1\gr.svg" />
+    <Content Include="Admin\assets\flags\1x1\gs.svg" />
+    <Content Include="Admin\assets\flags\1x1\gt.svg" />
+    <Content Include="Admin\assets\flags\1x1\gu.svg" />
+    <Content Include="Admin\assets\flags\1x1\gw.svg" />
+    <Content Include="Admin\assets\flags\1x1\gy.svg" />
+    <Content Include="Admin\assets\flags\1x1\hk.svg" />
+    <Content Include="Admin\assets\flags\1x1\hm.svg" />
+    <Content Include="Admin\assets\flags\1x1\hn.svg" />
+    <Content Include="Admin\assets\flags\1x1\hr.svg" />
+    <Content Include="Admin\assets\flags\1x1\ht.svg" />
+    <Content Include="Admin\assets\flags\1x1\hu.svg" />
+    <Content Include="Admin\assets\flags\1x1\id.svg" />
+    <Content Include="Admin\assets\flags\1x1\ie.svg" />
+    <Content Include="Admin\assets\flags\1x1\il.svg" />
+    <Content Include="Admin\assets\flags\1x1\im.svg" />
+    <Content Include="Admin\assets\flags\1x1\in.svg" />
+    <Content Include="Admin\assets\flags\1x1\io.svg" />
+    <Content Include="Admin\assets\flags\1x1\iq.svg" />
+    <Content Include="Admin\assets\flags\1x1\ir.svg" />
+    <Content Include="Admin\assets\flags\1x1\is.svg" />
+    <Content Include="Admin\assets\flags\1x1\it.svg" />
+    <Content Include="Admin\assets\flags\1x1\je.svg" />
+    <Content Include="Admin\assets\flags\1x1\jm.svg" />
+    <Content Include="Admin\assets\flags\1x1\jo.svg" />
+    <Content Include="Admin\assets\flags\1x1\jp.svg" />
+    <Content Include="Admin\assets\flags\1x1\ke.svg" />
+    <Content Include="Admin\assets\flags\1x1\kg.svg" />
+    <Content Include="Admin\assets\flags\1x1\kh.svg" />
+    <Content Include="Admin\assets\flags\1x1\ki.svg" />
+    <Content Include="Admin\assets\flags\1x1\km.svg" />
+    <Content Include="Admin\assets\flags\1x1\kn.svg" />
+    <Content Include="Admin\assets\flags\1x1\kp.svg" />
+    <Content Include="Admin\assets\flags\1x1\kr.svg" />
+    <Content Include="Admin\assets\flags\1x1\kw.svg" />
+    <Content Include="Admin\assets\flags\1x1\ky.svg" />
+    <Content Include="Admin\assets\flags\1x1\kz.svg" />
+    <Content Include="Admin\assets\flags\1x1\la.svg" />
+    <Content Include="Admin\assets\flags\1x1\lb.svg" />
+    <Content Include="Admin\assets\flags\1x1\lc.svg" />
+    <Content Include="Admin\assets\flags\1x1\li.svg" />
+    <Content Include="Admin\assets\flags\1x1\lk.svg" />
+    <Content Include="Admin\assets\flags\1x1\lr.svg" />
+    <Content Include="Admin\assets\flags\1x1\ls.svg" />
+    <Content Include="Admin\assets\flags\1x1\lt.svg" />
+    <Content Include="Admin\assets\flags\1x1\lu.svg" />
+    <Content Include="Admin\assets\flags\1x1\lv.svg" />
+    <Content Include="Admin\assets\flags\1x1\ly.svg" />
+    <Content Include="Admin\assets\flags\1x1\ma.svg" />
+    <Content Include="Admin\assets\flags\1x1\mc.svg" />
+    <Content Include="Admin\assets\flags\1x1\md.svg" />
+    <Content Include="Admin\assets\flags\1x1\me.svg" />
+    <Content Include="Admin\assets\flags\1x1\mf.svg" />
+    <Content Include="Admin\assets\flags\1x1\mg.svg" />
+    <Content Include="Admin\assets\flags\1x1\mh.svg" />
+    <Content Include="Admin\assets\flags\1x1\mk.svg" />
+    <Content Include="Admin\assets\flags\1x1\ml.svg" />
+    <Content Include="Admin\assets\flags\1x1\mm.svg" />
+    <Content Include="Admin\assets\flags\1x1\mn.svg" />
+    <Content Include="Admin\assets\flags\1x1\mo.svg" />
+    <Content Include="Admin\assets\flags\1x1\mp.svg" />
+    <Content Include="Admin\assets\flags\1x1\mq.svg" />
+    <Content Include="Admin\assets\flags\1x1\mr.svg" />
+    <Content Include="Admin\assets\flags\1x1\ms.svg" />
+    <Content Include="Admin\assets\flags\1x1\mt.svg" />
+    <Content Include="Admin\assets\flags\1x1\mu.svg" />
+    <Content Include="Admin\assets\flags\1x1\mv.svg" />
+    <Content Include="Admin\assets\flags\1x1\mw.svg" />
+    <Content Include="Admin\assets\flags\1x1\mx.svg" />
+    <Content Include="Admin\assets\flags\1x1\my.svg" />
+    <Content Include="Admin\assets\flags\1x1\mz.svg" />
+    <Content Include="Admin\assets\flags\1x1\na.svg" />
+    <Content Include="Admin\assets\flags\1x1\nc.svg" />
+    <Content Include="Admin\assets\flags\1x1\ne.svg" />
+    <Content Include="Admin\assets\flags\1x1\nf.svg" />
+    <Content Include="Admin\assets\flags\1x1\ng.svg" />
+    <Content Include="Admin\assets\flags\1x1\ni.svg" />
+    <Content Include="Admin\assets\flags\1x1\nl.svg" />
+    <Content Include="Admin\assets\flags\1x1\no.svg" />
+    <Content Include="Admin\assets\flags\1x1\np.svg" />
+    <Content Include="Admin\assets\flags\1x1\nr.svg" />
+    <Content Include="Admin\assets\flags\1x1\nu.svg" />
+    <Content Include="Admin\assets\flags\1x1\nz.svg" />
+    <Content Include="Admin\assets\flags\1x1\om.svg" />
+    <Content Include="Admin\assets\flags\1x1\pa.svg" />
+    <Content Include="Admin\assets\flags\1x1\pe.svg" />
+    <Content Include="Admin\assets\flags\1x1\pf.svg" />
+    <Content Include="Admin\assets\flags\1x1\pg.svg" />
+    <Content Include="Admin\assets\flags\1x1\ph.svg" />
+    <Content Include="Admin\assets\flags\1x1\pk.svg" />
+    <Content Include="Admin\assets\flags\1x1\pl.svg" />
+    <Content Include="Admin\assets\flags\1x1\pm.svg" />
+    <Content Include="Admin\assets\flags\1x1\pn.svg" />
+    <Content Include="Admin\assets\flags\1x1\pr.svg" />
+    <Content Include="Admin\assets\flags\1x1\ps.svg" />
+    <Content Include="Admin\assets\flags\1x1\pt.svg" />
+    <Content Include="Admin\assets\flags\1x1\pw.svg" />
+    <Content Include="Admin\assets\flags\1x1\py.svg" />
+    <Content Include="Admin\assets\flags\1x1\qa.svg" />
+    <Content Include="Admin\assets\flags\1x1\re.svg" />
+    <Content Include="Admin\assets\flags\1x1\ro.svg" />
+    <Content Include="Admin\assets\flags\1x1\rs.svg" />
+    <Content Include="Admin\assets\flags\1x1\ru.svg" />
+    <Content Include="Admin\assets\flags\1x1\rw.svg" />
+    <Content Include="Admin\assets\flags\1x1\sa.svg" />
+    <Content Include="Admin\assets\flags\1x1\sb.svg" />
+    <Content Include="Admin\assets\flags\1x1\sc.svg" />
+    <Content Include="Admin\assets\flags\1x1\sd.svg" />
+    <Content Include="Admin\assets\flags\1x1\se.svg" />
+    <Content Include="Admin\assets\flags\1x1\sg.svg" />
+    <Content Include="Admin\assets\flags\1x1\sh.svg" />
+    <Content Include="Admin\assets\flags\1x1\si.svg" />
+    <Content Include="Admin\assets\flags\1x1\sj.svg" />
+    <Content Include="Admin\assets\flags\1x1\sk.svg" />
+    <Content Include="Admin\assets\flags\1x1\sl.svg" />
+    <Content Include="Admin\assets\flags\1x1\sm.svg" />
+    <Content Include="Admin\assets\flags\1x1\sn.svg" />
+    <Content Include="Admin\assets\flags\1x1\so.svg" />
+    <Content Include="Admin\assets\flags\1x1\sr.svg" />
+    <Content Include="Admin\assets\flags\1x1\ss.svg" />
+    <Content Include="Admin\assets\flags\1x1\st.svg" />
+    <Content Include="Admin\assets\flags\1x1\sv.svg" />
+    <Content Include="Admin\assets\flags\1x1\sx.svg" />
+    <Content Include="Admin\assets\flags\1x1\sy.svg" />
+    <Content Include="Admin\assets\flags\1x1\sz.svg" />
+    <Content Include="Admin\assets\flags\1x1\tc.svg" />
+    <Content Include="Admin\assets\flags\1x1\td.svg" />
+    <Content Include="Admin\assets\flags\1x1\tf.svg" />
+    <Content Include="Admin\assets\flags\1x1\tg.svg" />
+    <Content Include="Admin\assets\flags\1x1\th.svg" />
+    <Content Include="Admin\assets\flags\1x1\tj.svg" />
+    <Content Include="Admin\assets\flags\1x1\tk.svg" />
+    <Content Include="Admin\assets\flags\1x1\tl.svg" />
+    <Content Include="Admin\assets\flags\1x1\tm.svg" />
+    <Content Include="Admin\assets\flags\1x1\tn.svg" />
+    <Content Include="Admin\assets\flags\1x1\to.svg" />
+    <Content Include="Admin\assets\flags\1x1\tr.svg" />
+    <Content Include="Admin\assets\flags\1x1\tt.svg" />
+    <Content Include="Admin\assets\flags\1x1\tv.svg" />
+    <Content Include="Admin\assets\flags\1x1\tw.svg" />
+    <Content Include="Admin\assets\flags\1x1\tz.svg" />
+    <Content Include="Admin\assets\flags\1x1\ua.svg" />
+    <Content Include="Admin\assets\flags\1x1\ug.svg" />
+    <Content Include="Admin\assets\flags\1x1\um.svg" />
+    <Content Include="Admin\assets\flags\1x1\un.svg" />
+    <Content Include="Admin\assets\flags\1x1\us.svg" />
+    <Content Include="Admin\assets\flags\1x1\uy.svg" />
+    <Content Include="Admin\assets\flags\1x1\uz.svg" />
+    <Content Include="Admin\assets\flags\1x1\va.svg" />
+    <Content Include="Admin\assets\flags\1x1\vc.svg" />
+    <Content Include="Admin\assets\flags\1x1\ve.svg" />
+    <Content Include="Admin\assets\flags\1x1\vg.svg" />
+    <Content Include="Admin\assets\flags\1x1\vi.svg" />
+    <Content Include="Admin\assets\flags\1x1\vn.svg" />
+    <Content Include="Admin\assets\flags\1x1\vu.svg" />
+    <Content Include="Admin\assets\flags\1x1\wf.svg" />
+    <Content Include="Admin\assets\flags\1x1\ws.svg" />
+    <Content Include="Admin\assets\flags\1x1\ye.svg" />
+    <Content Include="Admin\assets\flags\1x1\yt.svg" />
+    <Content Include="Admin\assets\flags\1x1\za.svg" />
+    <Content Include="Admin\assets\flags\1x1\zm.svg" />
+    <Content Include="Admin\assets\flags\1x1\zw.svg" />
+    <Content Include="Admin\assets\flags\4x3\ad.svg" />
+    <Content Include="Admin\assets\flags\4x3\ae.svg" />
+    <Content Include="Admin\assets\flags\4x3\af.svg" />
+    <Content Include="Admin\assets\flags\4x3\ag.svg" />
+    <Content Include="Admin\assets\flags\4x3\ai.svg" />
+    <Content Include="Admin\assets\flags\4x3\al.svg" />
+    <Content Include="Admin\assets\flags\4x3\am.svg" />
+    <Content Include="Admin\assets\flags\4x3\ao.svg" />
+    <Content Include="Admin\assets\flags\4x3\aq.svg" />
+    <Content Include="Admin\assets\flags\4x3\ar.svg" />
+    <Content Include="Admin\assets\flags\4x3\as.svg" />
+    <Content Include="Admin\assets\flags\4x3\at.svg" />
+    <Content Include="Admin\assets\flags\4x3\au.svg" />
+    <Content Include="Admin\assets\flags\4x3\aw.svg" />
+    <Content Include="Admin\assets\flags\4x3\ax.svg" />
+    <Content Include="Admin\assets\flags\4x3\az.svg" />
+    <Content Include="Admin\assets\flags\4x3\ba.svg" />
+    <Content Include="Admin\assets\flags\4x3\bb.svg" />
+    <Content Include="Admin\assets\flags\4x3\bd.svg" />
+    <Content Include="Admin\assets\flags\4x3\be.svg" />
+    <Content Include="Admin\assets\flags\4x3\bf.svg" />
+    <Content Include="Admin\assets\flags\4x3\bg.svg" />
+    <Content Include="Admin\assets\flags\4x3\bh.svg" />
+    <Content Include="Admin\assets\flags\4x3\bi.svg" />
+    <Content Include="Admin\assets\flags\4x3\bj.svg" />
+    <Content Include="Admin\assets\flags\4x3\bl.svg" />
+    <Content Include="Admin\assets\flags\4x3\bm.svg" />
+    <Content Include="Admin\assets\flags\4x3\bn.svg" />
+    <Content Include="Admin\assets\flags\4x3\bo.svg" />
+    <Content Include="Admin\assets\flags\4x3\bq.svg" />
+    <Content Include="Admin\assets\flags\4x3\br.svg" />
+    <Content Include="Admin\assets\flags\4x3\bs.svg" />
+    <Content Include="Admin\assets\flags\4x3\bt.svg" />
+    <Content Include="Admin\assets\flags\4x3\bv.svg" />
+    <Content Include="Admin\assets\flags\4x3\bw.svg" />
+    <Content Include="Admin\assets\flags\4x3\by.svg" />
+    <Content Include="Admin\assets\flags\4x3\bz.svg" />
+    <Content Include="Admin\assets\flags\4x3\ca.svg" />
+    <Content Include="Admin\assets\flags\4x3\cc.svg" />
+    <Content Include="Admin\assets\flags\4x3\cd.svg" />
+    <Content Include="Admin\assets\flags\4x3\cf.svg" />
+    <Content Include="Admin\assets\flags\4x3\cg.svg" />
+    <Content Include="Admin\assets\flags\4x3\ch.svg" />
+    <Content Include="Admin\assets\flags\4x3\ci.svg" />
+    <Content Include="Admin\assets\flags\4x3\ck.svg" />
+    <Content Include="Admin\assets\flags\4x3\cl.svg" />
+    <Content Include="Admin\assets\flags\4x3\cm.svg" />
+    <Content Include="Admin\assets\flags\4x3\cn.svg" />
+    <Content Include="Admin\assets\flags\4x3\co.svg" />
+    <Content Include="Admin\assets\flags\4x3\cr.svg" />
+    <Content Include="Admin\assets\flags\4x3\cu.svg" />
+    <Content Include="Admin\assets\flags\4x3\cv.svg" />
+    <Content Include="Admin\assets\flags\4x3\cw.svg" />
+    <Content Include="Admin\assets\flags\4x3\cx.svg" />
+    <Content Include="Admin\assets\flags\4x3\cy.svg" />
+    <Content Include="Admin\assets\flags\4x3\cz.svg" />
+    <Content Include="Admin\assets\flags\4x3\de.svg" />
+    <Content Include="Admin\assets\flags\4x3\dj.svg" />
+    <Content Include="Admin\assets\flags\4x3\dk.svg" />
+    <Content Include="Admin\assets\flags\4x3\dm.svg" />
+    <Content Include="Admin\assets\flags\4x3\do.svg" />
+    <Content Include="Admin\assets\flags\4x3\dz.svg" />
+    <Content Include="Admin\assets\flags\4x3\ec.svg" />
+    <Content Include="Admin\assets\flags\4x3\ee.svg" />
+    <Content Include="Admin\assets\flags\4x3\eg.svg" />
+    <Content Include="Admin\assets\flags\4x3\eh.svg" />
+    <Content Include="Admin\assets\flags\4x3\er.svg" />
+    <Content Include="Admin\assets\flags\4x3\es-ct.svg" />
+    <Content Include="Admin\assets\flags\4x3\es.svg" />
+    <Content Include="Admin\assets\flags\4x3\et.svg" />
+    <Content Include="Admin\assets\flags\4x3\eu.svg" />
+    <Content Include="Admin\assets\flags\4x3\fi.svg" />
+    <Content Include="Admin\assets\flags\4x3\fj.svg" />
+    <Content Include="Admin\assets\flags\4x3\fk.svg" />
+    <Content Include="Admin\assets\flags\4x3\fm.svg" />
+    <Content Include="Admin\assets\flags\4x3\fo.svg" />
+    <Content Include="Admin\assets\flags\4x3\fr.svg" />
+    <Content Include="Admin\assets\flags\4x3\ga.svg" />
+    <Content Include="Admin\assets\flags\4x3\gb-eng.svg" />
+    <Content Include="Admin\assets\flags\4x3\gb-nir.svg" />
+    <Content Include="Admin\assets\flags\4x3\gb-sct.svg" />
+    <Content Include="Admin\assets\flags\4x3\gb-wls.svg" />
+    <Content Include="Admin\assets\flags\4x3\gb.svg" />
+    <Content Include="Admin\assets\flags\4x3\gd.svg" />
+    <Content Include="Admin\assets\flags\4x3\ge.svg" />
+    <Content Include="Admin\assets\flags\4x3\gf.svg" />
+    <Content Include="Admin\assets\flags\4x3\gg.svg" />
+    <Content Include="Admin\assets\flags\4x3\gh.svg" />
+    <Content Include="Admin\assets\flags\4x3\gi.svg" />
+    <Content Include="Admin\assets\flags\4x3\gl.svg" />
+    <Content Include="Admin\assets\flags\4x3\gm.svg" />
+    <Content Include="Admin\assets\flags\4x3\gn.svg" />
+    <Content Include="Admin\assets\flags\4x3\gp.svg" />
+    <Content Include="Admin\assets\flags\4x3\gq.svg" />
+    <Content Include="Admin\assets\flags\4x3\gr.svg" />
+    <Content Include="Admin\assets\flags\4x3\gs.svg" />
+    <Content Include="Admin\assets\flags\4x3\gt.svg" />
+    <Content Include="Admin\assets\flags\4x3\gu.svg" />
+    <Content Include="Admin\assets\flags\4x3\gw.svg" />
+    <Content Include="Admin\assets\flags\4x3\gy.svg" />
+    <Content Include="Admin\assets\flags\4x3\hk.svg" />
+    <Content Include="Admin\assets\flags\4x3\hm.svg" />
+    <Content Include="Admin\assets\flags\4x3\hn.svg" />
+    <Content Include="Admin\assets\flags\4x3\hr.svg" />
+    <Content Include="Admin\assets\flags\4x3\ht.svg" />
+    <Content Include="Admin\assets\flags\4x3\hu.svg" />
+    <Content Include="Admin\assets\flags\4x3\id.svg" />
+    <Content Include="Admin\assets\flags\4x3\ie.svg" />
+    <Content Include="Admin\assets\flags\4x3\il.svg" />
+    <Content Include="Admin\assets\flags\4x3\im.svg" />
+    <Content Include="Admin\assets\flags\4x3\in.svg" />
+    <Content Include="Admin\assets\flags\4x3\io.svg" />
+    <Content Include="Admin\assets\flags\4x3\iq.svg" />
+    <Content Include="Admin\assets\flags\4x3\ir.svg" />
+    <Content Include="Admin\assets\flags\4x3\is.svg" />
+    <Content Include="Admin\assets\flags\4x3\it.svg" />
+    <Content Include="Admin\assets\flags\4x3\je.svg" />
+    <Content Include="Admin\assets\flags\4x3\jm.svg" />
+    <Content Include="Admin\assets\flags\4x3\jo.svg" />
+    <Content Include="Admin\assets\flags\4x3\jp.svg" />
+    <Content Include="Admin\assets\flags\4x3\ke.svg" />
+    <Content Include="Admin\assets\flags\4x3\kg.svg" />
+    <Content Include="Admin\assets\flags\4x3\kh.svg" />
+    <Content Include="Admin\assets\flags\4x3\ki.svg" />
+    <Content Include="Admin\assets\flags\4x3\km.svg" />
+    <Content Include="Admin\assets\flags\4x3\kn.svg" />
+    <Content Include="Admin\assets\flags\4x3\kp.svg" />
+    <Content Include="Admin\assets\flags\4x3\kr.svg" />
+    <Content Include="Admin\assets\flags\4x3\kw.svg" />
+    <Content Include="Admin\assets\flags\4x3\ky.svg" />
+    <Content Include="Admin\assets\flags\4x3\kz.svg" />
+    <Content Include="Admin\assets\flags\4x3\la.svg" />
+    <Content Include="Admin\assets\flags\4x3\lb.svg" />
+    <Content Include="Admin\assets\flags\4x3\lc.svg" />
+    <Content Include="Admin\assets\flags\4x3\li.svg" />
+    <Content Include="Admin\assets\flags\4x3\lk.svg" />
+    <Content Include="Admin\assets\flags\4x3\lr.svg" />
+    <Content Include="Admin\assets\flags\4x3\ls.svg" />
+    <Content Include="Admin\assets\flags\4x3\lt.svg" />
+    <Content Include="Admin\assets\flags\4x3\lu.svg" />
+    <Content Include="Admin\assets\flags\4x3\lv.svg" />
+    <Content Include="Admin\assets\flags\4x3\ly.svg" />
+    <Content Include="Admin\assets\flags\4x3\ma.svg" />
+    <Content Include="Admin\assets\flags\4x3\mc.svg" />
+    <Content Include="Admin\assets\flags\4x3\md.svg" />
+    <Content Include="Admin\assets\flags\4x3\me.svg" />
+    <Content Include="Admin\assets\flags\4x3\mf.svg" />
+    <Content Include="Admin\assets\flags\4x3\mg.svg" />
+    <Content Include="Admin\assets\flags\4x3\mh.svg" />
+    <Content Include="Admin\assets\flags\4x3\mk.svg" />
+    <Content Include="Admin\assets\flags\4x3\ml.svg" />
+    <Content Include="Admin\assets\flags\4x3\mm.svg" />
+    <Content Include="Admin\assets\flags\4x3\mn.svg" />
+    <Content Include="Admin\assets\flags\4x3\mo.svg" />
+    <Content Include="Admin\assets\flags\4x3\mp.svg" />
+    <Content Include="Admin\assets\flags\4x3\mq.svg" />
+    <Content Include="Admin\assets\flags\4x3\mr.svg" />
+    <Content Include="Admin\assets\flags\4x3\ms.svg" />
+    <Content Include="Admin\assets\flags\4x3\mt.svg" />
+    <Content Include="Admin\assets\flags\4x3\mu.svg" />
+    <Content Include="Admin\assets\flags\4x3\mv.svg" />
+    <Content Include="Admin\assets\flags\4x3\mw.svg" />
+    <Content Include="Admin\assets\flags\4x3\mx.svg" />
+    <Content Include="Admin\assets\flags\4x3\my.svg" />
+    <Content Include="Admin\assets\flags\4x3\mz.svg" />
+    <Content Include="Admin\assets\flags\4x3\na.svg" />
+    <Content Include="Admin\assets\flags\4x3\nc.svg" />
+    <Content Include="Admin\assets\flags\4x3\ne.svg" />
+    <Content Include="Admin\assets\flags\4x3\nf.svg" />
+    <Content Include="Admin\assets\flags\4x3\ng.svg" />
+    <Content Include="Admin\assets\flags\4x3\ni.svg" />
+    <Content Include="Admin\assets\flags\4x3\nl.svg" />
+    <Content Include="Admin\assets\flags\4x3\no.svg" />
+    <Content Include="Admin\assets\flags\4x3\np.svg" />
+    <Content Include="Admin\assets\flags\4x3\nr.svg" />
+    <Content Include="Admin\assets\flags\4x3\nu.svg" />
+    <Content Include="Admin\assets\flags\4x3\nz.svg" />
+    <Content Include="Admin\assets\flags\4x3\om.svg" />
+    <Content Include="Admin\assets\flags\4x3\pa.svg" />
+    <Content Include="Admin\assets\flags\4x3\pe.svg" />
+    <Content Include="Admin\assets\flags\4x3\pf.svg" />
+    <Content Include="Admin\assets\flags\4x3\pg.svg" />
+    <Content Include="Admin\assets\flags\4x3\ph.svg" />
+    <Content Include="Admin\assets\flags\4x3\pk.svg" />
+    <Content Include="Admin\assets\flags\4x3\pl.svg" />
+    <Content Include="Admin\assets\flags\4x3\pm.svg" />
+    <Content Include="Admin\assets\flags\4x3\pn.svg" />
+    <Content Include="Admin\assets\flags\4x3\pr.svg" />
+    <Content Include="Admin\assets\flags\4x3\ps.svg" />
+    <Content Include="Admin\assets\flags\4x3\pt.svg" />
+    <Content Include="Admin\assets\flags\4x3\pw.svg" />
+    <Content Include="Admin\assets\flags\4x3\py.svg" />
+    <Content Include="Admin\assets\flags\4x3\qa.svg" />
+    <Content Include="Admin\assets\flags\4x3\re.svg" />
+    <Content Include="Admin\assets\flags\4x3\ro.svg" />
+    <Content Include="Admin\assets\flags\4x3\rs.svg" />
+    <Content Include="Admin\assets\flags\4x3\ru.svg" />
+    <Content Include="Admin\assets\flags\4x3\rw.svg" />
+    <Content Include="Admin\assets\flags\4x3\sa.svg" />
+    <Content Include="Admin\assets\flags\4x3\sb.svg" />
+    <Content Include="Admin\assets\flags\4x3\sc.svg" />
+    <Content Include="Admin\assets\flags\4x3\sd.svg" />
+    <Content Include="Admin\assets\flags\4x3\se.svg" />
+    <Content Include="Admin\assets\flags\4x3\sg.svg" />
+    <Content Include="Admin\assets\flags\4x3\sh.svg" />
+    <Content Include="Admin\assets\flags\4x3\si.svg" />
+    <Content Include="Admin\assets\flags\4x3\sj.svg" />
+    <Content Include="Admin\assets\flags\4x3\sk.svg" />
+    <Content Include="Admin\assets\flags\4x3\sl.svg" />
+    <Content Include="Admin\assets\flags\4x3\sm.svg" />
+    <Content Include="Admin\assets\flags\4x3\sn.svg" />
+    <Content Include="Admin\assets\flags\4x3\so.svg" />
+    <Content Include="Admin\assets\flags\4x3\sr.svg" />
+    <Content Include="Admin\assets\flags\4x3\ss.svg" />
+    <Content Include="Admin\assets\flags\4x3\st.svg" />
+    <Content Include="Admin\assets\flags\4x3\sv.svg" />
+    <Content Include="Admin\assets\flags\4x3\sx.svg" />
+    <Content Include="Admin\assets\flags\4x3\sy.svg" />
+    <Content Include="Admin\assets\flags\4x3\sz.svg" />
+    <Content Include="Admin\assets\flags\4x3\tc.svg" />
+    <Content Include="Admin\assets\flags\4x3\td.svg" />
+    <Content Include="Admin\assets\flags\4x3\tf.svg" />
+    <Content Include="Admin\assets\flags\4x3\tg.svg" />
+    <Content Include="Admin\assets\flags\4x3\th.svg" />
+    <Content Include="Admin\assets\flags\4x3\tj.svg" />
+    <Content Include="Admin\assets\flags\4x3\tk.svg" />
+    <Content Include="Admin\assets\flags\4x3\tl.svg" />
+    <Content Include="Admin\assets\flags\4x3\tm.svg" />
+    <Content Include="Admin\assets\flags\4x3\tn.svg" />
+    <Content Include="Admin\assets\flags\4x3\to.svg" />
+    <Content Include="Admin\assets\flags\4x3\tr.svg" />
+    <Content Include="Admin\assets\flags\4x3\tt.svg" />
+    <Content Include="Admin\assets\flags\4x3\tv.svg" />
+    <Content Include="Admin\assets\flags\4x3\tw.svg" />
+    <Content Include="Admin\assets\flags\4x3\tz.svg" />
+    <Content Include="Admin\assets\flags\4x3\ua.svg" />
+    <Content Include="Admin\assets\flags\4x3\ug.svg" />
+    <Content Include="Admin\assets\flags\4x3\um.svg" />
+    <Content Include="Admin\assets\flags\4x3\un.svg" />
+    <Content Include="Admin\assets\flags\4x3\us.svg" />
+    <Content Include="Admin\assets\flags\4x3\uy.svg" />
+    <Content Include="Admin\assets\flags\4x3\uz.svg" />
+    <Content Include="Admin\assets\flags\4x3\va.svg" />
+    <Content Include="Admin\assets\flags\4x3\vc.svg" />
+    <Content Include="Admin\assets\flags\4x3\ve.svg" />
+    <Content Include="Admin\assets\flags\4x3\vg.svg" />
+    <Content Include="Admin\assets\flags\4x3\vi.svg" />
+    <Content Include="Admin\assets\flags\4x3\vn.svg" />
+    <Content Include="Admin\assets\flags\4x3\vu.svg" />
+    <Content Include="Admin\assets\flags\4x3\wf.svg" />
+    <Content Include="Admin\assets\flags\4x3\ws.svg" />
+    <Content Include="Admin\assets\flags\4x3\ye.svg" />
+    <Content Include="Admin\assets\flags\4x3\yt.svg" />
+    <Content Include="Admin\assets\flags\4x3\za.svg" />
+    <Content Include="Admin\assets\flags\4x3\zm.svg" />
+    <Content Include="Admin\assets\flags\4x3\zw.svg" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Admin\assets\fonts\Simple-Line-Iconsb26c.svg" />
+    <Content Include="Admin\assets\fonts\themify9f24.svg" />
+    <Content Include="Admin\assets\font\weathericons-regular-webfont-2.html" />
+    <Content Include="Admin\assets\font\weathericons-regular-webfont-3.html" />
+    <Content Include="Admin\assets\font\weathericons-regular-webfont.html" />
+    <Content Include="Admin\assets\images\avatars\avatar-1.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-10.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-13.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-14.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-15.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-16.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-17.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-18.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-2.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-3.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-4.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-5.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-6.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-7.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-8.png" />
+    <Content Include="Admin\assets\images\avatars\avatar-9.png" />
+    <Content Include="Admin\assets\images\bg-sighn-2.jpg" />
+    <Content Include="Admin\assets\images\bg-sighn-21.png" />
+    <Content Include="Admin\assets\images\bg-themes\1.png" />
+    <Content Include="Admin\assets\images\bg-themes\2.png" />
+    <Content Include="Admin\assets\images\bg-themes\3.png" />
+    <Content Include="Admin\assets\images\bg-themes\4.png" />
+    <Content Include="Admin\assets\images\bg-themes\5.png" />
+    <Content Include="Admin\assets\images\bg-themes\6.png" />
+    <Content Include="Admin\assets\images\coming-soon.png" />
+    <Content Include="Admin\assets\images\error-texture.png" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-1.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-10.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-11.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-12.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-13.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-14.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-15.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-16.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-2.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-3.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-4.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-5.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-6.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-7.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-8.jpg" />
+    <Content Include="Admin\assets\images\fancybox\big\big-img-9.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-1.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-10.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-11.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-12.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-13.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-14.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-15.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-16.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-2.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-3.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-4.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-5.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-6.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-7.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-8.jpg" />
+    <Content Include="Admin\assets\images\fancybox\small\small-img-9.jpg" />
+    <Content Include="Admin\assets\images\favicon.ico" />
+    <Content Include="Admin\assets\images\gallery\1.jpg" />
+    <Content Include="Admin\assets\images\gallery\10.jpg" />
+    <Content Include="Admin\assets\images\gallery\11.jpg" />
+    <Content Include="Admin\assets\images\gallery\12.jpg" />
+    <Content Include="Admin\assets\images\gallery\16.jpg" />
+    <Content Include="Admin\assets\images\gallery\17.jpg" />
+    <Content Include="Admin\assets\images\gallery\18.jpg" />
+    <Content Include="Admin\assets\images\gallery\19.jpg" />
+    <Content Include="Admin\assets\images\gallery\2.jpg" />
+    <Content Include="Admin\assets\images\gallery\20.jpg" />
+    <Content Include="Admin\assets\images\gallery\21.jpg" />
+    <Content Include="Admin\assets\images\gallery\25.jpg" />
+    <Content Include="Admin\assets\images\gallery\26.jpg" />
+    <Content Include="Admin\assets\images\gallery\3.jpg" />
+    <Content Include="Admin\assets\images\gallery\31.jpg" />
+    <Content Include="Admin\assets\images\gallery\4.jpg" />
+    <Content Include="Admin\assets\images\gallery\6.jpg" />
+    <Content Include="Admin\assets\images\gallery\7.jpg" />
+    <Content Include="Admin\assets\images\gallery\8.jpg" />
+    <Content Include="Admin\assets\images\gallery\9.jpg" />
+    <Content Include="Admin\assets\images\gallery\modal-img.jpg" />
+    <Content Include="Admin\assets\images\gallery\slider-1.jpg" />
+    <Content Include="Admin\assets\images\gallery\slider-10.jpg" />
+    <Content Include="Admin\assets\images\gallery\slider-11.jpg" />
+    <Content Include="Admin\assets\images\gallery\slider-12.jpg" />
+    <Content Include="Admin\assets\images\gallery\slider-2.jpg" />
+    <Content Include="Admin\assets\images\gallery\slider-4.jpg" />
+    <Content Include="Admin\assets\images\gallery\slider-5.jpg" />
+    <Content Include="Admin\assets\images\gallery\slider-6.jpg" />
+    <Content Include="Admin\assets\images\gallery\slider-7.jpg" />
+    <Content Include="Admin\assets\images\gallery\slider-8.jpg" />
+    <Content Include="Admin\assets\images\gallery\slider-9.jpg" />
+    <Content Include="Admin\assets\images\Icon.jpg" />
+    <Content Include="Admin\assets\images\logo-icon.png" />
+    <Content Include="Admin\assets\images\payment-icons\american-dark.png" />
+    <Content Include="Admin\assets\images\payment-icons\mastro-dark.png" />
+    <Content Include="Admin\assets\images\payment-icons\paypal-dark.png" />
+    <Content Include="Admin\assets\images\payment-icons\visa-dark.png" />
+    <Content Include="Admin\assets\images\products\01.png" />
+    <Content Include="Admin\assets\images\products\02.png" />
+    <Content Include="Admin\assets\images\products\03.png" />
+    <Content Include="Admin\assets\images\products\04.png" />
+    <Content Include="Admin\assets\images\products\05.png" />
+    <Content Include="Admin\assets\images\products\06.png" />
+    <Content Include="Admin\assets\images\products\property01.jpg" />
+    <Content Include="Admin\assets\images\products\property02.jpg" />
+    <Content Include="Admin\assets\images\products\property03.jpg" />
+    <Content Include="Admin\assets\images\products\property04.jpg" />
+    <Content Include="Admin\assets\images\products\property05.jpg" />
+    <Content Include="Admin\assets\images\timeline\angular-icon.svg" />
+    <Content Include="Admin\assets\images\timeline\bootstrap-4.svg" />
+    <Content Include="Admin\assets\images\timeline\cd-arrow.svg" />
+    <Content Include="Admin\assets\images\timeline\cd-icon-location.svg" />
+    <Content Include="Admin\assets\images\timeline\cd-icon-movie.svg" />
+    <Content Include="Admin\assets\images\timeline\cd-icon-picture.svg" />
+    <Content Include="Admin\assets\images\timeline\html5.svg" />
+    <Content Include="Admin\assets\images\timeline\react.svg" />
+    <Content Include="Admin\assets\images\tours.png" />
+    <Content Include="Admin\assets\js\app-script.js" />
+    <Content Include="Admin\assets\js\bootstrap.min.js" />
+    <Content Include="Admin\assets\js\index.js" />
+    <Content Include="Admin\assets\js\index2.js" />
+    <Content Include="Admin\assets\js\jquery.loading-indicator.html" />
+    <Content Include="Admin\assets\js\jquery.min.js" />
+    <Content Include="Admin\assets\js\logistics.js" />
+    <Content Include="Admin\assets\js\popper.min.js" />
+    <Content Include="Admin\assets\js\service-support.js" />
+    <Content Include="Admin\assets\js\sidebar-menu.js" />
+    <Content Include="Admin\assets\js\widgets.js" />
+    <Content Include="Admin\assets\plugins\alerts-boxes\js\sweet-alert-script.js" />
+    <Content Include="Admin\assets\plugins\alerts-boxes\js\sweetalert.min.js" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\css\buttons.bootstrap4.min.css" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\js\buttons.bootstrap4.min.js" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\js\buttons.colVis.min.js" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\js\buttons.html5.min.js" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\js\buttons.print.min.js" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\js\dataTables.buttons.min.js" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\js\jquery.dataTables.min.js" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\js\jszip.min.js" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\js\pdfmake.min.js" />
+    <Content Include="Admin\assets\plugins\bootstrap-datatable\js\vfs_fonts.js" />
+    <Content Include="Admin\assets\plugins\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="Admin\AHome.aspx" />
+    <Content Include="Admin\email.aspx" />
+    <Content Include="Admin\image\australiya.jpg" />
+    <Content Include="Admin\image\dubai18.jpg" />
+    <Content Include="Admin\image\europe.jpg" />
+    <Content Include="Admin\image\image1.jpg" />
+    <Content Include="Admin\image\image2.jpg" />
+    <Content Include="Admin\image\image3.jpg" />
+    <Content Include="Admin\image\kashmir.jpg" />
+    <Content Include="Admin\image\manali.jpg" />
+    <Content Include="Admin\tourtype.aspx" />
+    <Content Include="Admin\disptourtype.aspx" />
+    <Content Include="Admin\deletetourtype.aspx" />
+    <Content Include="Admin\tourdetails.aspx" />
+    <Content Include="Admin\disptourdetails.aspx" />
+    <Content Include="Admin\deletetourdetails.aspx" />
+    <Content Include="Admin\adminprofile.aspx" />
+    <Content Include="Admin\addgallary.aspx" />
+    <Content Include="Admin\tourguidedata.aspx" />
+    <Content Include="Admin\deletetourguide.aspx" />
+    <Content Include="Admin\approvetourguide.aspx" />
+    <Content Include="Admin\unapprovetourguide.aspx" />
+    <Content Include="Admin\deleteapprovetourguide.aspx" />
+    <Content Include="Admin\touritinerary.aspx" />
+    <Content Include="Admin\disptouritinerary.aspx" />
+    <Content Include="Admin\deletetouritinerary.aspx" />
+    <Content Include="Admin\tourmap.aspx" />
+    <Content Include="Admin\tourinclusion.aspx" />
+    <Content Include="Admin\disptourinclusion.aspx" />
+    <Content Include="Admin\deletetourinclusion.aspx" />
+    <Content Include="Admin\tourexclusion.aspx" />
+    <Content Include="Admin\disptourexclusion.aspx" />
+    <Content Include="Admin\deletetourexclusion.aspx" />
+    <Content Include="Admin\tourhotel.aspx" />
+    <Content Include="Admin\disptourhotel.aspx" />
+    <Content Include="Admin\deletehoteldetail.aspx" />
+    <Content Include="Admin\country.aspx" />
+    <Content Include="Admin\dispcountry.aspx" />
+    <Content Include="Admin\deletecountry.aspx" />
+    <Content Include="Admin\state.aspx" />
+    <Content Include="Admin\dispstate.aspx" />
+    <Content Include="Admin\deletestate.aspx" />
+    <Content Include="Admin\city.aspx" />
+    <Content Include="Admin\dispcity.aspx" />
+    <Content Include="Admin\deletecity.aspx" />
+    <Content Include="Admin\dispuser.aspx" />
+    <Content Include="Admin\logout.aspx" />
+    <Content Include="Admin\dispcontactus.aspx" />
+    <Content Include="Admin\deletecontactus.aspx" />
+    <Content Include="Admin\dispcontact.aspx" />
+    <Content Include="Admin\deleteuser.aspx" />
+    <Content Include="Admin\passport.aspx" />
+    <Content Include="Admin\dipPassport.aspx" />
+    <Content Include="Admin\deletepassport.aspx" />
+    <Content Include="Admin\DispBooking.aspx" />
+    <Content Include="Admin\customizeTour.aspx" />
+    <Content Include="Admin\dispcustomizedTour.aspx" />
+    <Content Include="Admin\approvecustomizedTour.aspx" />
+    <Content Include="Admin\dispCustomizeTour.aspx" />
+    <Content Include="App_Data\Tours and Travels.mdf" />
+    <Content Include="App_Data\Tours and Travels_log.ldf">
+      <DependentUpon>Tours and Travels.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\css\backendf700.css" />
+    <Content Include="assets\images\blog\01.jpg" />
+    <Content Include="assets\images\blog\02.jpg" />
+    <Content Include="assets\images\blog\03.jpg" />
+    <Content Include="assets\images\blog\04.jpg" />
+    <Content Include="assets\images\blog\05.jpg" />
+    <Content Include="assets\images\blog\06.jpg" />
+    <Content Include="assets\images\blog\07.jpg" />
+    <Content Include="assets\images\blog\08.jpg" />
+    <Content Include="assets\images\blog\09.jpg" />
+    <Content Include="assets\images\blog\10.jpg" />
+    <Content Include="assets\images\blog\11.jpg" />
+    <Content Include="assets\images\blog\12.jpg" />
+    <Content Include="assets\images\blog\13.jpg" />
+    <Content Include="assets\images\blog\14.jpg" />
+    <Content Include="assets\images\blog\15.jpg" />
+    <Content Include="assets\images\dark-loader.gif" />
+    <Content Include="assets\images\error\02.png" />
+    <Content Include="assets\images\error\404.png" />
+    <Content Include="assets\images\error\500.png" />
+    <Content Include="assets\images\gallery\grid\01.jpg" />
+    <Content Include="assets\images\gallery\grid\02.jpg" />
+    <Content Include="assets\images\gallery\grid\03.jpg" />
+    <Content Include="assets\images\gallery\grid\04.jpg" />
+    <Content Include="assets\images\gallery\grid\05.jpg" />
+    <Content Include="assets\images\gallery\grid\06.jpg" />
+    <Content Include="assets\images\gallery\grid\07.jpg" />
+    <Content Include="assets\images\gallery\grid\08.jpg" />
+    <Content Include="assets\images\gallery\grid\09.jpg" />
+    <Content Include="assets\images\gallery\grid\10.jpg" />
+    <Content Include="assets\images\gallery\grid\11.jpg" />
+    <Content Include="assets\images\gallery\grid\12.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\01.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\02.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\03.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\04.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\05.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\06.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\07.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\08.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\09.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\10.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\11.jpg" />
+    <Content Include="assets\images\gallery\hover-effects\12.jpg" />
+    <Content Include="assets\images\gallery\masonry\01.jpg" />
+    <Content Include="assets\images\gallery\masonry\02.jpg" />
+    <Content Include="assets\images\gallery\masonry\03.jpg" />
+    <Content Include="assets\images\gallery\masonry\04.jpg" />
+    <Content Include="assets\images\gallery\masonry\05.jpg" />
+    <Content Include="assets\images\gallery\masonry\06.jpg" />
+    <Content Include="assets\images\gallery\masonry\07.jpg" />
+    <Content Include="assets\images\gallery\masonry\08.jpg" />
+    <Content Include="assets\images\gallery\masonry\09.jpg" />
+    <Content Include="assets\images\gallery\masonry\10.jpg" />
+    <Content Include="assets\images\gallery\masonry\11.jpg" />
+    <Content Include="assets\images\gallery\masonry\12.jpg" />
+    <Content Include="assets\images\icon\14.png" />
+    <Content Include="assets\images\icon\15.png" />
+    <Content Include="assets\images\icon\16.png" />
+    <Content Include="assets\images\icon\17.png" />
+    <Content Include="assets\images\icon\18.png" />
+    <Content Include="assets\images\layouts\side-bkg.png" />
+    <Content Include="assets\images\loader.gif" />
+    <Content Include="assets\images\login\01.png" />
+    <Content Include="assets\images\login\mail.png" />
+    <Content Include="assets\images\login\signup.png" />
+    <Content Include="assets\images\logo-white.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\page-img\07.jpg" />
+    <Content Include="assets\images\page-img\08.jpg" />
+    <Content Include="assets\images\page-img\09.jpg" />
+    <Content Include="assets\images\page-img\10.jpg" />
+    <Content Include="assets\images\page-img\11.jpg" />
+    <Content Include="assets\images\page-img\12.jpg" />
+    <Content Include="assets\images\page-img\13.jpg" />
+    <Content Include="assets\images\page-img\14.jpg" />
+    <Content Include="assets\images\page-img\15.jpg" />
+    <Content Include="assets\images\page-img\16.jpg" />
+    <Content Include="assets\images\page-img\17.jpg" />
+    <Content Include="assets\images\page-img\18.jpg" />
+    <Content Include="assets\images\page-img\19.jpg" />
+    <Content Include="assets\images\page-img\20.jpg" />
+    <Content Include="assets\images\page-img\21.jpg" />
+    <Content Include="assets\images\page-img\22.jpg" />
+    <Content Include="assets\images\page-img\23.jpg" />
+    <Content Include="assets\images\page-img\24.jpg" />
+    <Content Include="assets\images\small\flag-01.png" />
+    <Content Include="assets\images\small\flag-02.png" />
+    <Content Include="assets\images\small\flag-03.png" />
+    <Content Include="assets\images\small\flag-04.png" />
+    <Content Include="assets\images\small\flag-05.png" />
+    <Content Include="assets\images\small\flag-06.png" />
+    <Content Include="assets\images\small\img-1.jpg" />
+    <Content Include="assets\images\sort_asc.png" />
+    <Content Include="assets\images\sort_asc_disabled.png" />
+    <Content Include="assets\images\sort_both.png" />
+    <Content Include="assets\images\sort_desc.png" />
+    <Content Include="assets\images\sort_desc_disabled.png" />
+    <Content Include="assets\images\user\01.jpg" />
+    <Content Include="assets\images\user\02.jpg" />
+    <Content Include="assets\images\user\03.jpg" />
+    <Content Include="assets\images\user\04.jpg" />
+    <Content Include="assets\images\user\05.jpg" />
+    <Content Include="assets\images\user\06.jpg" />
+    <Content Include="assets\images\user\07.jpg" />
+    <Content Include="assets\images\user\08.jpg" />
+    <Content Include="assets\images\user\09.jpg" />
+    <Content Include="assets\images\user\1.jpg" />
+    <Content Include="assets\images\user\10.jpg" />
+    <Content Include="assets\images\user\11.png" />
+    <Content Include="assets\images\user\12.jpg" />
+    <Content Include="assets\images\user\i1.jpg" />
+    <Content Include="assets\js\apexcharts.js" />
+    <Content Include="assets\js\app.js" />
+    <Content Include="assets\js\backend-bundle.min.js" />
+    <Content Include="assets\js\chart-custom.js" />
+    <Content Include="assets\js\countdown.js" />
+    <Content Include="assets\js\customizer.js" />
+    <Content Include="assets\js\flex-tree.min.js" />
+    <Content Include="assets\js\imagesloaded.pkgd.min.js" />
+    <Content Include="assets\js\mapbox-gl.js" />
+    <Content Include="assets\js\mapbox.js" />
+    <Content Include="assets\js\masonry.pkgd.min.js" />
+    <Content Include="assets\js\slider.js" />
+    <Content Include="assets\js\sweetalert.js" />
+    <Content Include="assets\js\table-treeview.js" />
+    <Content Include="assets\js\tree.js" />
+    <Content Include="assets\js\vector-map-custom.js" />
+    <Content Include="assets\vendor\%40fortawesome\fontawesome-free\css\all.min.css" />
+    <Content Include="assets\vendor\%40icon\dripicons\dripicons.css" />
+    <Content Include="assets\vendor\%40icon\dripicons\dripicons.svg" />
+    <Content Include="assets\vendor\fullcalendar\core\main.css" />
+    <Content Include="assets\vendor\fullcalendar\core\main.js" />
+    <Content Include="assets\vendor\fullcalendar\daygrid\main.css" />
+    <Content Include="assets\vendor\fullcalendar\daygrid\main.js" />
+    <Content Include="assets\vendor\fullcalendar\list\main.css" />
+    <Content Include="assets\vendor\fullcalendar\list\main.js" />
+    <Content Include="assets\vendor\fullcalendar\timegrid\main.css" />
+    <Content Include="assets\vendor\fullcalendar\timegrid\main.js" />
+    <Content Include="assets\vendor\line-awesome\dist\line-awesome\css\line-awesome.min.css" />
+    <Content Include="assets\vendor\mapbox\mapbox-gl.css" />
+    <Content Include="assets\vendor\remixicon\fonts\remixicon.css" />
+    <Content Include="assets\vendor\remixicon\fonts\remixicondf6d.html" />
+    <Content Include="assets\vendor\remixicon\fonts\remixicondf6d.svg" />
+    <Content Include="User\css\animate.css" />
+    <Content Include="User\css\bootstrap-datepicker.min.css" />
+    <Content Include="User\css\bootstrap.min.css" />
+    <Content Include="User\css\images\ui-icons_444444_256x240.html" />
+    <Content Include="User\css\images\ui-icons_555555_256x240.html" />
+    <Content Include="User\css\images\ui-icons_777620_256x240.html" />
+    <Content Include="User\css\images\ui-icons_777777_256x240.html" />
+    <Content Include="User\css\images\ui-icons_cc0000_256x240.html" />
+    <Content Include="User\css\images\ui-icons_ffffff_256x240.html" />
+    <Content Include="User\css\jquery-ui.css" />
+    <Content Include="User\css\nice-select.css" />
+    <Content Include="User\css\owl.carousel.min.css" />
+    <Content Include="User\css\owl.video.play.html" />
+    <Content Include="User\css\scrollCue.css" />
+    <Content Include="User\css\venobox.css" />
+    <Content Include="User\fonts\font-awesome\css\all.min.css" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="User\img\about\1.png" />
+    <Content Include="User\img\about\team1.png" />
+    <Content Include="User\img\about\team2.png" />
+    <Content Include="User\img\about\team3.png" />
+    <Content Include="User\img\banner\banner-shape1.png" />
+    <Content Include="User\img\banner\banner-shape2.png" />
+    <Content Include="User\img\banner\banner-shape3.png" />
+    <Content Include="User\img\banner\banner-top-right.png" />
+    <Content Include="User\img\banner\bottom-left.png" />
+    <Content Include="User\img\banner\frontimage.jpg" />
+    <Content Include="User\img\banner\slide-1.png" />
+    <Content Include="User\img\banner\slide-2.png" />
+    <Content Include="User\img\banner\slide-3.png" />
+    <Content Include="User\img\banner\sub-page.png" />
+    <Content Include="User\img\bg-graphics.png" />
+    <Content Include="User\img\blog\1.png" />
+    <Content Include="User\img\blog\2.png" />
+    <Content Include="User\img\blog\3.png" />
+    <Content Include="User\img\blog\author.png" />
+    <Content Include="User\img\blog\Black_Friday.png" />
+    <Content Include="User\img\blog\blog1.png" />
+    <Content Include="User\img\blog\blog2.png" />
+    <Content Include="User\img\blog\comment.png" />
+    <Content Include="User\img\blog\post1.png" />
+    <Content Include="User\img\blog\post2.png" />
+    <Content Include="User\img\blog\post3.png" />
+    <Content Include="User\img\blog\post4.png" />
+    <Content Include="User\img\contact\contact-img.png" />
+    <Content Include="User\img\destinations\1.png" />
+    <Content Include="User\img\destinations\2.png" />
+    <Content Include="User\img\destinations\3.png" />
+    <Content Include="User\img\destinations\4.png" />
+    <Content Include="User\img\destinations\5.png" />
+    <Content Include="User\img\favicon.png" />
+    <Content Include="User\img\features\1.png" />
+    <Content Include="User\img\footer-bg.png" />
+    <Content Include="User\img\footer-logo.png" />
+    <Content Include="User\img\logo-colored.png" />
+    <Content Include="User\img\logo.png" />
+    <Content Include="User\img\testimonials\1.png" />
+    <Content Include="User\img\testimonials\brand1.png" />
+    <Content Include="User\img\testimonials\brand2.png" />
+    <Content Include="User\img\testimonials\brand3.png" />
+    <Content Include="User\img\tours.png" />
+    <Content Include="User\img\tour\1.png" />
+    <Content Include="User\img\tour\2.png" />
+    <Content Include="User\img\tour\3.png" />
+    <Content Include="User\img\tour\black-friday.png" />
+    <Content Include="User\js\bootstrap-datepicker.min.js" />
+    <Content Include="User\js\bootstrap.bundle.min.js" />
+    <Content Include="User\js\jquery-3.6.0.min.js" />
+    <Content Include="User\js\jquery-ui.min.js" />
+    <Content Include="User\js\jquery.counterup.min.js" />
+    <Content Include="User\js\jquery.easing.min.js" />
+    <Content Include="User\js\jquery.filterizr.min.js" />
+    <Content Include="User\js\jquery.nice-select.min.js" />
+    <Content Include="User\js\owl.carousel.min.js" />
+    <Content Include="User\js\script.js" />
+    <Content Include="User\js\scrollCue.min.js" />
+    <Content Include="User\js\sticky-kit.min.js" />
+    <Content Include="User\js\tilt.jquery.js" />
+    <Content Include="User\js\venobox.min.js" />
+    <Content Include="User\js\waypoints.min.js" />
+    <Content Include="User\js\wow.js" />
+    <Content Include="User\style.css" />
+    <Content Include="User\UHome.aspx" />
+    <Content Include="User\user_signup.aspx" />
+    <Content Include="User\user_signin.aspx" />
+    <Content Include="User\verifyOtp.aspx" />
+    <Content Include="User\gallary.aspx" />
+    <Content Include="User\tourguidedata.aspx" />
+    <Content Include="User\aboutUs.aspx" />
+    <Content Include="User\tourlist.aspx" />
+    <Content Include="User\touritinerary.aspx" />
+    <Content Include="User\forgotpassword.aspx" />
+    <Content Include="User\tourhotel.aspx" />
+    <Content Include="User\retrypass.aspx" />
+    <Content Include="User\booknow.aspx" />
+    <Content Include="User\contectus.aspx" />
+    <Content Include="User\resendotp.aspx" />
+    <Content Include="User\passport.aspx" />
+    <Content Include="User\Payment.aspx" />
+    <Content Include="User\Return.aspx" />
+    <Content Include="User\Logout.aspx" />
+    <Content Include="User\rating.aspx" />
+    <Content Include="User\customizeTour.aspx" />
+    <Content Include="User\dispCustomizeTour.aspx" />
+    <Content Include="User\cutomizeTourBooking.aspx" />
+    <Content Include="User\payment1.aspx" />
+    <Content Include="User\Return1.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin_register.aspx.cs">
+      <DependentUpon>admin_register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\admin_register.aspx.designer.cs">
+      <DependentUpon>admin_register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin_signin.aspx.cs">
+      <DependentUpon>admin_signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\admin_signin.aspx.designer.cs">
+      <DependentUpon>admin_signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AHome.aspx.cs">
+      <DependentUpon>AHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AHome.aspx.designer.cs">
+      <DependentUpon>AHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\email.aspx.cs">
+      <DependentUpon>email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\email.aspx.designer.cs">
+      <DependentUpon>email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\tourtype.aspx.cs">
+      <DependentUpon>tourtype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\tourtype.aspx.designer.cs">
+      <DependentUpon>tourtype.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\disptourtype.aspx.cs">
+      <DependentUpon>disptourtype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\disptourtype.aspx.designer.cs">
+      <DependentUpon>disptourtype.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletetourtype.aspx.cs">
+      <DependentUpon>deletetourtype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletetourtype.aspx.designer.cs">
+      <DependentUpon>deletetourtype.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\tourdetails.aspx.cs">
+      <DependentUpon>tourdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\tourdetails.aspx.designer.cs">
+      <DependentUpon>tourdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\disptourdetails.aspx.cs">
+      <DependentUpon>disptourdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\disptourdetails.aspx.designer.cs">
+      <DependentUpon>disptourdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletetourdetails.aspx.cs">
+      <DependentUpon>deletetourdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletetourdetails.aspx.designer.cs">
+      <DependentUpon>deletetourdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminprofile.aspx.cs">
+      <DependentUpon>adminprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adminprofile.aspx.designer.cs">
+      <DependentUpon>adminprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\addgallary.aspx.cs">
+      <DependentUpon>addgallary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\addgallary.aspx.designer.cs">
+      <DependentUpon>addgallary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\tourguidedata.aspx.cs">
+      <DependentUpon>tourguidedata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\tourguidedata.aspx.designer.cs">
+      <DependentUpon>tourguidedata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletetourguide.aspx.cs">
+      <DependentUpon>deletetourguide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletetourguide.aspx.designer.cs">
+      <DependentUpon>deletetourguide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\approvetourguide.aspx.cs">
+      <DependentUpon>approvetourguide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\approvetourguide.aspx.designer.cs">
+      <DependentUpon>approvetourguide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\unapprovetourguide.aspx.cs">
+      <DependentUpon>unapprovetourguide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\unapprovetourguide.aspx.designer.cs">
+      <DependentUpon>unapprovetourguide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deleteapprovetourguide.aspx.cs">
+      <DependentUpon>deleteapprovetourguide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deleteapprovetourguide.aspx.designer.cs">
+      <DependentUpon>deleteapprovetourguide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\touritinerary.aspx.cs">
+      <DependentUpon>touritinerary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\touritinerary.aspx.designer.cs">
+      <DependentUpon>touritinerary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\disptouritinerary.aspx.cs">
+      <DependentUpon>disptouritinerary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\disptouritinerary.aspx.designer.cs">
+      <DependentUpon>disptouritinerary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletetouritinerary.aspx.cs">
+      <DependentUpon>deletetouritinerary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletetouritinerary.aspx.designer.cs">
+      <DependentUpon>deletetouritinerary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\tourmap.aspx.cs">
+      <DependentUpon>tourmap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\tourmap.aspx.designer.cs">
+      <DependentUpon>tourmap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\tourinclusion.aspx.cs">
+      <DependentUpon>tourinclusion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\tourinclusion.aspx.designer.cs">
+      <DependentUpon>tourinclusion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\disptourinclusion.aspx.cs">
+      <DependentUpon>disptourinclusion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\disptourinclusion.aspx.designer.cs">
+      <DependentUpon>disptourinclusion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletetourinclusion.aspx.cs">
+      <DependentUpon>deletetourinclusion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletetourinclusion.aspx.designer.cs">
+      <DependentUpon>deletetourinclusion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\tourexclusion.aspx.cs">
+      <DependentUpon>tourexclusion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\tourexclusion.aspx.designer.cs">
+      <DependentUpon>tourexclusion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\disptourexclusion.aspx.cs">
+      <DependentUpon>disptourexclusion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\disptourexclusion.aspx.designer.cs">
+      <DependentUpon>disptourexclusion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletetourexclusion.aspx.cs">
+      <DependentUpon>deletetourexclusion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletetourexclusion.aspx.designer.cs">
+      <DependentUpon>deletetourexclusion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\tourhotel.aspx.cs">
+      <DependentUpon>tourhotel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\tourhotel.aspx.designer.cs">
+      <DependentUpon>tourhotel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\disptourhotel.aspx.cs">
+      <DependentUpon>disptourhotel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\disptourhotel.aspx.designer.cs">
+      <DependentUpon>disptourhotel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletehoteldetail.aspx.cs">
+      <DependentUpon>deletehoteldetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletehoteldetail.aspx.designer.cs">
+      <DependentUpon>deletehoteldetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\country.aspx.cs">
+      <DependentUpon>country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\country.aspx.designer.cs">
+      <DependentUpon>country.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\dispcountry.aspx.cs">
+      <DependentUpon>dispcountry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dispcountry.aspx.designer.cs">
+      <DependentUpon>dispcountry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletecountry.aspx.cs">
+      <DependentUpon>deletecountry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletecountry.aspx.designer.cs">
+      <DependentUpon>deletecountry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\state.aspx.cs">
+      <DependentUpon>state.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\state.aspx.designer.cs">
+      <DependentUpon>state.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\dispstate.aspx.cs">
+      <DependentUpon>dispstate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dispstate.aspx.designer.cs">
+      <DependentUpon>dispstate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletestate.aspx.cs">
+      <DependentUpon>deletestate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletestate.aspx.designer.cs">
+      <DependentUpon>deletestate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\city.aspx.cs">
+      <DependentUpon>city.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\city.aspx.designer.cs">
+      <DependentUpon>city.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\dispcity.aspx.cs">
+      <DependentUpon>dispcity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dispcity.aspx.designer.cs">
+      <DependentUpon>dispcity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletecity.aspx.cs">
+      <DependentUpon>deletecity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletecity.aspx.designer.cs">
+      <DependentUpon>deletecity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\dispuser.aspx.cs">
+      <DependentUpon>dispuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dispuser.aspx.designer.cs">
+      <DependentUpon>dispuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\dispcontactus.aspx.cs">
+      <DependentUpon>dispcontactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dispcontactus.aspx.designer.cs">
+      <DependentUpon>dispcontactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletecontactus.aspx.cs">
+      <DependentUpon>deletecontactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletecontactus.aspx.designer.cs">
+      <DependentUpon>deletecontactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\dispcontact.aspx.cs">
+      <DependentUpon>dispcontact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dispcontact.aspx.designer.cs">
+      <DependentUpon>dispcontact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deleteuser.aspx.cs">
+      <DependentUpon>deleteuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deleteuser.aspx.designer.cs">
+      <DependentUpon>deleteuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\passport.aspx.cs">
+      <DependentUpon>passport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\passport.aspx.designer.cs">
+      <DependentUpon>passport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\dipPassport.aspx.cs">
+      <DependentUpon>dipPassport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dipPassport.aspx.designer.cs">
+      <DependentUpon>dipPassport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\deletepassport.aspx.cs">
+      <DependentUpon>deletepassport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\deletepassport.aspx.designer.cs">
+      <DependentUpon>deletepassport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DispBooking.aspx.cs">
+      <DependentUpon>DispBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DispBooking.aspx.designer.cs">
+      <DependentUpon>DispBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customizeTour.aspx.cs">
+      <DependentUpon>customizeTour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customizeTour.aspx.designer.cs">
+      <DependentUpon>customizeTour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\dispcustomizedTour.aspx.cs">
+      <DependentUpon>dispcustomizedTour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dispcustomizedTour.aspx.designer.cs">
+      <DependentUpon>dispcustomizedTour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\approvecustomizedTour.aspx.cs">
+      <DependentUpon>approvecustomizedTour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\approvecustomizedTour.aspx.designer.cs">
+      <DependentUpon>approvecustomizedTour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\dispCustomizeTour.aspx.cs">
+      <DependentUpon>dispCustomizeTour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dispCustomizeTour.aspx.designer.cs">
+      <DependentUpon>dispCustomizeTour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\user.Master.cs">
+      <DependentUpon>user.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\user.Master.designer.cs">
+      <DependentUpon>user.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\UHome.aspx.cs">
+      <DependentUpon>UHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UHome.aspx.designer.cs">
+      <DependentUpon>UHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\user_signup.aspx.cs">
+      <DependentUpon>user_signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\user_signup.aspx.designer.cs">
+      <DependentUpon>user_signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\user_signin.aspx.cs">
+      <DependentUpon>user_signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\user_signin.aspx.designer.cs">
+      <DependentUpon>user_signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\verifyOtp.aspx.cs">
+      <DependentUpon>verifyOtp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\verifyOtp.aspx.designer.cs">
+      <DependentUpon>verifyOtp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\gallary.aspx.cs">
+      <DependentUpon>gallary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\gallary.aspx.designer.cs">
+      <DependentUpon>gallary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\tourguidedata.aspx.cs">
+      <DependentUpon>tourguidedata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\tourguidedata.aspx.designer.cs">
+      <DependentUpon>tourguidedata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\aboutUs.aspx.cs">
+      <DependentUpon>aboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\aboutUs.aspx.designer.cs">
+      <DependentUpon>aboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\tourlist.aspx.cs">
+      <DependentUpon>tourlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\tourlist.aspx.designer.cs">
+      <DependentUpon>tourlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\touritinerary.aspx.cs">
+      <DependentUpon>touritinerary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\touritinerary.aspx.designer.cs">
+      <DependentUpon>touritinerary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\forgotpassword.aspx.cs">
+      <DependentUpon>forgotpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\forgotpassword.aspx.designer.cs">
+      <DependentUpon>forgotpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\tourhotel.aspx.cs">
+      <DependentUpon>tourhotel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\tourhotel.aspx.designer.cs">
+      <DependentUpon>tourhotel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\retrypass.aspx.cs">
+      <DependentUpon>retrypass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\retrypass.aspx.designer.cs">
+      <DependentUpon>retrypass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\booknow.aspx.cs">
+      <DependentUpon>booknow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\booknow.aspx.designer.cs">
+      <DependentUpon>booknow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\contectus.aspx.cs">
+      <DependentUpon>contectus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\contectus.aspx.designer.cs">
+      <DependentUpon>contectus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\resendotp.aspx.cs">
+      <DependentUpon>resendotp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\resendotp.aspx.designer.cs">
+      <DependentUpon>resendotp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\passport.aspx.cs">
+      <DependentUpon>passport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\passport.aspx.designer.cs">
+      <DependentUpon>passport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Return.aspx.cs">
+      <DependentUpon>Return.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Return.aspx.designer.cs">
+      <DependentUpon>Return.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\rating.aspx.cs">
+      <DependentUpon>rating.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\rating.aspx.designer.cs">
+      <DependentUpon>rating.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\customizeTour.aspx.cs">
+      <DependentUpon>customizeTour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\customizeTour.aspx.designer.cs">
+      <DependentUpon>customizeTour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\dispCustomizeTour.aspx.cs">
+      <DependentUpon>dispCustomizeTour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\dispCustomizeTour.aspx.designer.cs">
+      <DependentUpon>dispCustomizeTour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\cutomizeTourBooking.aspx.cs">
+      <DependentUpon>cutomizeTourBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\cutomizeTourBooking.aspx.designer.cs">
+      <DependentUpon>cutomizeTourBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\payment1.aspx.cs">
+      <DependentUpon>payment1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\payment1.aspx.designer.cs">
+      <DependentUpon>payment1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Return1.aspx.cs">
+      <DependentUpon>Return1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Return1.aspx.designer.cs">
+      <DependentUpon>Return1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\assets\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="Admin\assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Admin\assets\fonts\Material-Design-Iconic-Fontd1f1.ttf" />
+    <Content Include="Admin\assets\fonts\Material-Design-Iconic-Fontd1f1.woff" />
+    <Content Include="Admin\assets\fonts\Material-Design-Iconic-Fontd1f1.woff2" />
+    <Content Include="Admin\assets\fonts\Simple-Line-Iconsb26c.eot" />
+    <Content Include="Admin\assets\fonts\Simple-Line-Iconsb26c.ttf" />
+    <Content Include="Admin\assets\fonts\Simple-Line-Iconsb26c.woff" />
+    <Content Include="Admin\assets\fonts\Simple-Line-Iconsb26c.woff2" />
+    <Content Include="Admin\assets\fonts\themify9f24.eot" />
+    <Content Include="Admin\assets\fonts\themify9f24.ttf" />
+    <Content Include="Admin\assets\fonts\themify9f24.woff" />
+    <Content Include="Admin\assets\fonts\themifyd41d.eot" />
+    <Content Include="Admin\assets\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Admin\assets\fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="Admin\assets\fonts\weathericons-regular-webfontd41d.eot" />
+    <Content Include="assets\vendor\%40icon\dripicons\dripicons.eot" />
+    <Content Include="assets\vendor\%40icon\dripicons\dripicons.ttf" />
+    <Content Include="assets\vendor\%40icon\dripicons\dripicons.woff" />
+    <Content Include="assets\vendor\%40icon\dripicons\dripiconsd41d.eot" />
+    <Content Include="assets\vendor\remixicon\fonts\remixicondf6d.eot" />
+    <Content Include="assets\vendor\remixicon\fonts\remixicondf6d.ttf" />
+    <Content Include="assets\vendor\remixicon\fonts\remixicondf6d.woff" />
+    <Content Include="Admin\admin.Master" />
+    <None Include="packages.config" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-brands-400d41d.eot" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-regular-400d41d.eot" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="User\fonts\font-awesome\webfonts\fa-solid-900d41d.eot" />
+    <Content Include="User\user.Master" />
+    <Content Include="User\Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\assets\plugins\bootstrap-datepicker\js\" />
+    <Folder Include="Admin\hotelImage\" />
+    <Folder Include="Gallary\" />
+    <Folder Include="Guidrs\" />
+    <Folder Include="User\image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>21781</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:21781/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
